@@ -1,0 +1,18 @@
+<div class="container post-preview">
+  <div class="page-name">Posts</div>
+
+  <ul class="post-preview__list">
+    <li *ngFor="let post of this.postService.posts().posts">
+      <a [routerLink]="['/post', post.id]">
+        <img [src]="post.image" />
+        <span class="post-title">
+          {{ post.title }}
+        </span>
+
+        <span class="post-theme">
+          {{ post.theme }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>

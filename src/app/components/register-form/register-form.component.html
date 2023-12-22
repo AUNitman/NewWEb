@@ -1,0 +1,42 @@
+<form (ngSubmit)="onSubmit($event)" [formGroup]="myForm" class="container form-auth">
+  <div class="form-name">Register</div>
+
+  <label>
+    <div class="input-name">
+      <span>email</span>
+      <div class="error-message" *ngIf="myForm.get('email')?.invalid">
+        min length: 2
+      </div>
+    </div>
+    <input formControlName="email" type="email" />
+  </label>
+  <label>
+    <div class="input-name">
+      <span>username</span>
+
+      <div class="error-message" *ngIf="myForm.get('username')?.invalid">
+        min length: 2
+      </div>
+    </div>
+    <input
+      (input)="enterUsername($event)"
+      formControlName="username"
+      type="text"
+    />
+  </label>
+  <label>
+    <div class="input-name">
+      <span>password</span>
+      <div class="error-message" *ngIf="myForm.get('password')?.invalid">
+        min length: 8
+      </div>
+    </div>
+    <input
+      (input)="enterPassword($event)"
+      formControlName="password"
+      type="password"
+    />
+  </label>
+
+  <button type="submit">Login</button>
+</form>

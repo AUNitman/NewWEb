@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+body,
+html {
+    min-height: 100vh;
+}
+
+body {
+    background-color: black;
+}
+
+button {
+    outline: none;
+    border: 0;
+}
+
+a {
+    color: #9c27b0;
+}

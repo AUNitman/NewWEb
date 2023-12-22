@@ -1,0 +1,35 @@
+.text {
+    font-weight: 900;
+}
+
+.header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    color: white;
+    background-color: black;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 10px;
+
+    button {
+        background-color: transparent;
+        color: #9c27b0;
+    }
+}

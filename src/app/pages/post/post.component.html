@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="container post">
+  <img [src]="this.postService.postInfo()?.image" />
+
+  <div class="post-text">{{ postService.postInfo()?.content }}</div>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit($event)">
+    <div class="form-name">Comments</div>
+
+    <ul *ngFor="let comment of this.postService.comments()">
+      <li>
+        <span class="comment-user">
+          <img src="../../../assets/avatar.jpg" width="24" height="24 " />
+          <span>
+            {{ comment.username }}
+          </span>
+        </span>
+
+        <span>
+          {{ comment.content }}
+        </span>
+      </li>
+    </ul>
+
+    <textarea formControlName="text"></textarea>
+
+    <div class="form-submit-btn">
+      <button type="submit">Comment</button>
+    </div>
+  </form>
+</div>
